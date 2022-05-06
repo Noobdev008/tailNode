@@ -46,30 +46,30 @@ function App() {
   }
 
 
-  const isChecked = (id) => {
-    let updatedToDoList = items.map((item) => {
-        if(item.id === id){
-            item.isChecked = !item.isChecked;
-            if(item.isChecked === true){
-                let newtodos = [...items]
-                let index = newtodos.findIndex(obj => obj.id === id);
-                let trueItem = newtodos[index];
-                newtodos.forEach(element => {
-                    if(element.id === id){
-                        newtodos.splice(index, 1);
-                    }
-                });
-                let newCompleted = [...newtodos];
-                newCompleted.unshift(trueItem);
-                setItems(newCompleted);
-            }
-        }
-        return(
-            item
-     )
-   });
-   setItems(updatedToDoList);
-}
+//   const isChecked = (id) => {
+//     let updatedToDoList = items.map((item) => {
+//         if(item.id === id){
+//             item.isChecked = !item.isChecked;
+//             if(item.isChecked === true){
+//                 let newtodos = [...items]
+//                 let index = newtodos.findIndex(obj => obj.id === id);
+//                 let trueItem = newtodos[index];
+//                 newtodos.forEach(element => {
+//                     if(element.id === id){
+//                         newtodos.splice(index, 1);
+//                     }
+//                 });
+//                 let newCompleted = [...newtodos];
+//                 newCompleted.unshift(trueItem);
+//                 setItems(newCompleted);
+//             }
+//         }
+//         return(
+//             item
+//      )
+//    });
+//    setItems(updatedToDoList);
+// }
 
   return (
     <>
